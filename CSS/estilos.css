@@ -1,0 +1,223 @@
+/*define el fondo negro*/
+body{
+	background: #02010a;
+}
+#contenido
+{
+	width:900px;
+	margin: 0 auto;
+}
+/*animacion slidein para el header*/
+header {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 150%;
+    width: 100%
+  }
+
+  to {
+    margin-top: -5%;
+    width: 100%;
+  }
+}
+/*estilos para la barra de navegacion y el titulo*/
+.navbar{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color:#5b7989;
+  box-sizing: border-box;
+	padding: 10px;
+  text-shadow: 2px 2px #02010a;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+  height: 100%;
+}
+/*estilos para los likns del navbar*/
+.links > a {
+  font-family: "Dancing Script", cursive;
+  padding:10px;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bolder;
+  font-size: 25px;
+  text-shadow: none !important;
+}
+/*estilos para las etiquetas h1*/
+h1{
+  font-family: "Dancing Script", cursive;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bolder;
+  font-size: 50px;
+}
+/*estilos para las etiquetas h2*/
+h2{
+  font-family: "Dancing Script", cursive;
+  color: rgba(17, 19, 12, 1);
+  text-decoration: underline;
+}
+/*Elimina el subrayado del link que corresponde a la pagina actual*/
+.active{
+  text-decoration: none !important;
+}
+/*estilos para imagenes adaptativas*/
+img{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  box-shadow: 3px 3px #02010a;
+}
+/*contenedores para imagenes adaptativas*/
+.cuadro{
+  box-sizing: border-box;
+	background-color: #d5c75f;
+  margin: 0 auto;
+	padding: 25px;
+	text-align: center;
+  border: 1px;
+	width: 100%;
+}
+/*contenedor de la imagen principal*/
+.cuadro1{
+	background-color:  #82c3a6;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border: 1px;
+	padding: 30px;
+}
+#foto1{
+	width: 95%;
+	margin: 0 auto;
+}
+/*contenedor de imagen secundaria y footer*/
+.mainc{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	width: 100%;
+}
+/*contenedor wrap para paisajes pag.*/
+.cuadro2{
+	background-color:#d5c75f;
+	box-sizing: border-box;
+	margin: 0 auto;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	width: 100%;
+	align-content: center;
+	justify-content: space-between;
+	padding: 50px;
+}
+img[class^="x"]{
+	width:95%;
+	margin: 0 auto;
+}
+/*contenedores para pie de pagina*/
+[class$="k"]{
+  box-sizing: border-box;
+  background-color: #C6d5c5;
+  border: 1px;
+	padding: 30px;
+	font-family: "Dancing Script", cursive;
+	color:rgba(0, 0, 0, 1);
+	text-align: left;
+	font-size: 20px;
+	width: 100%;
+}
+.Contactok{
+	border-bottom-left-radius: 10px;
+	width: 100%;
+}
+.Derechok{
+	border-bottom-right-radius: 10px;
+	width: 100%;
+}
+h4{
+	font-size: 30px;
+}
+/*filtro blur para imagen 1*/
+.img1{
+	filter: blur(10px);
+}
+/*escala de grises para cuadros impares*/
+.img2{
+	filter: grayscale(100%);
+}
+.img4{
+	filter: grayscale(100%);
+}
+.img6{
+	filter: grayscale(100%);
+}
+.img3{
+	filter: sepia(90%);
+}
+/*efecto para paisajes*/
+#foto3 :hover {
+    transform: rotate(10deg);
+    border: 2px solid #82c3a6;
+    transition-duration: 1s;
+  }
+/*efectos para retratos*/
+#foto2 :hover{
+    transform: translateX(20px) translatey(-5px);
+    border: 2px solid #82c3a6;
+    transition-duration: 1s;
+}
+/*Elimina los transform hereditarios*/
+a :hover{
+	transform: none !important;
+	border: none !important;
+}
+/*estilos para los logos de redes sociales*/
+img[src$=".png"]{
+	box-shadow: none !important;
+	width: 10%;
+	height: 100%;
+	max-height: 35px;
+	padding: 1px;
+}
+@media screen and (max-width: 900px){
+	#contenido
+	{
+		width:100%;
+		margin: 0 auto;
+	}
+	.navbar{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content:center;
+		text-align: center;
+	}
+	.mainc{
+		display: flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+	}
+	.Contactok{
+		border-bottom-left-radius:0px;
+	}
+	.Derechok{
+		border-bottom-left-radius:10px;
+		border-bottom-right-radius: 10px;
+	}
+	.cuadro2{
+		flex-direction:row;
+		flex-wrap:wrap;
+		align-items: flex-end;
+	}
+	img[class^="x"]{
+		width:80%;
+		margin: 0 auto;
+	}
+}
